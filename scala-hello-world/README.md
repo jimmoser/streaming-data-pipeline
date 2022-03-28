@@ -9,7 +9,7 @@ A maven project for practicing Scala.
 Navigate to App.scala file, and there should be a green arrow next to the main method. Click the green arrow, and click 
 run.
 
-What is the output?
+What is the output? "Hello World"
 
 Note, if you don't see this green arrow or running the App doesn't work. Check to make sure you have Java installed.
 

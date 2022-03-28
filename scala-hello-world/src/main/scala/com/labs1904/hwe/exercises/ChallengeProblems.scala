@@ -8,12 +8,17 @@ object ChallengeProblems {
     Returns - String
   */
 
+  val sameString: String => String = (aString: String) => aString
 
   /*
   2. Write a function that returns "Hello World!" and takes in nothing as a parameter
   Params - None
   Returns - String
    */
+
+  def helloWorld(): String = {
+    "Hello World!"
+  }
 
   /*
   3. Write a function that takes in a list and returns the total size of the list
@@ -22,6 +27,10 @@ object ChallengeProblems {
   Returns - Int
    */
 
+  def listSize(aList: List[Int]): Int = {
+    aList.size
+  }
+
   /*
   4. Write a function that takes in an int and adds an int that you create within the function and returns the addition of the two together
   Note - Your variable must be a val and must be equal to 25
@@ -29,6 +38,10 @@ object ChallengeProblems {
   Returns - Int
    */
 
+  def sumInts(int1: Int): Int = {
+    val int2 = 25
+    int1 + int2
+  }
 
   /*
    5. Write a function that takes in a list of strings, and return a list of strings where every letter is capitalized
@@ -37,11 +50,19 @@ object ChallengeProblems {
    Returns - List[String]
 */
 
+  def upper(ListoStrings: List[String]): List[String] = {
+    ListoStrings.map((x: String) => x.toUpperCase())
+  }
+
   /*
   6. Write a function that returns a new list, where only elements of the list passed in that are 0 or positive numbers are kept.
   Params - List[Int]
   Returns - List[Int]
    */
+
+  def filterNegatives(aList: List[Int]): List[Int] = {
+    aList.filter(_ >= 0 )
+  }
 
   /*
   7. Returns a new list, where only the elements passed in containing "car" are kept to the new list.
@@ -49,11 +70,19 @@ object ChallengeProblems {
   Returns - List[String]
  */
 
+  def containsCar(aList: List[String]): List[String] = {
+    aList.filter(_.contains("car"))
+  }
+
   /*
     8. Returns the sum of all numbers passed in.
     Params - List[Int]
     Returns - Int
    */
+
+  def sumList(aList: List[Int]): Int = {
+    aList.sum
+  }
 
   /*
   9. Write a function that takes in an integer with a cats age, and return the human age equivalent.
@@ -61,6 +90,10 @@ object ChallengeProblems {
     Params - Int
     Returns - Int
    */
+
+  def catsAge(anInt: Int): Int = {
+    anInt * 4
+  }
 
   /*
   10. Same question as #9, but this time you are given a Option[Int]
@@ -70,6 +103,14 @@ object ChallengeProblems {
     -Params - Option[Int]
     -Returns - Option[Int]
  */
+
+//  def catsAgeOption(age: Option[Int]): Option[Int] = {
+//    if (age != None) {
+//      final_age = age * 4
+//    } else {
+//
+//    }
+//  }
 
   /*
   11. Write a function that takes in a list of ints, and return the minimum of the ints provided
