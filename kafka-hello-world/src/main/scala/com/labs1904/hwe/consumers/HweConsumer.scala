@@ -11,6 +11,8 @@ import org.apache.kafka.common.serialization.StringDeserializer
 import java.time.Duration
 import java.util.{Arrays, Properties, UUID}
 
+case class RawUser(id: String, name:String, email:String)
+
 object HweConsumer {
   val BootstrapServer : String = "CHANGEME"
   val consumerTopic: String = "question-1"
@@ -18,9 +20,9 @@ object HweConsumer {
   val username: String = "CHANGEME"
   val password: String = "CHANGEME"
   //Use this for Windows
-  val trustStore: String = "src\\main\\resources\\kafka.client.truststore.jks"
+//  val trustStore: String = "src\\main\\resources\\kafka.client.truststore.jks"
   //Use this for Mac
-  //val trustStore: String = "src/main/resources/kafka.client.truststore.jks"
+  val trustStore: String = "src/main/resources/kafka.client.truststore.jks"
 
   implicit val formats: DefaultFormats.type = DefaultFormats
 
@@ -49,7 +51,8 @@ object HweConsumer {
         val message = record.value()
         println(s"Message Received: $message")
         // TODO: Add business logic here!
-
+        val split_message = message.split(",")
+        RawUser(split_message(0),split_message(1),split_message(2))
       })
     }
   }

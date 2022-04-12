@@ -22,6 +22,9 @@ reword confusing descriptions in a way that makes sense to you.
 * Helpful resource: [Apache Spark Use Cases](https://www.toptal.com/spark/introduction-to-apache-spark)
 * [Overivew of Apache Spark](https://www.youtube.com/watch?v=znBa13Earms&t=42s)
 
+To sum up, Spark helps to simplify the challenging and computationally intensive task of processing high volumes of 
+real-time or archived data, both structured and unstructured, seamlessly integrating relevant complex capabilities such as machine learning and graph algorithms. Spark brings Big Data processing to the masses.
+
 #### What is Apache Spark?
 * Helpful resource: [Spark Overview](https://www.youtube.com/watch?v=ymtq8yjmD9I) 
 
